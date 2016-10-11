@@ -10,17 +10,14 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-
-
-
-
-
 /**
  *
  * @author antosamalona
  */
 @Getter @Setter @AllArgsConstructor
 public class Customer {
+    
+        private String id;
     
     	@TableColumn(header ="Kode Pelanggan")
 	private String kd_pelanggan;
@@ -30,4 +27,6 @@ public class Customer {
 	
 	@TableColumn(header ="Alamat")
 	private String alamat;
+        
+        public Customer(){}
 }
