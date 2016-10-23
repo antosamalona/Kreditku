@@ -29,13 +29,7 @@ public class BarangDao {
     private static final String QUERY_GETONE = "SELECT * FROM barang WHERE kd_brg=?";
     public static final String QUERY_GETALL = "SELECT * FROM barang";
     
-    private com.mysql.jdbc.Connection connection;     
-        
-        
-
-//    private static final String url = "jdbc:mysql://localhost/dbku";
-//    private static final String user = "root";
-//    private static final String password = "n4kk3 j13";
+    private com.mysql.jdbc.Connection connection;
 	
 	PreparedStatement psInsert;
 	PreparedStatement psUpdate;
@@ -49,7 +43,6 @@ public class BarangDao {
 	private BarangDao(){
         
         try {
-           // Connection connection = (Connection) DriverManager.getConnection(url, user, password);
             connection = (com.mysql.jdbc.Connection) KoneksiDb.connection;
             psInsert = (PreparedStatement) connection.prepareStatement(QUERY_INSERT);
             psUpdate = (PreparedStatement) connection.prepareStatement(QUERY_UPDATE);

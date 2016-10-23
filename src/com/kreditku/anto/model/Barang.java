@@ -18,7 +18,6 @@ import lombok.Setter;
 @Getter @Setter @AllArgsConstructor
 public class Barang {
     
-    private String id;
     
     @TableColumn(header ="Kode Barang")
     private String kd_brg;

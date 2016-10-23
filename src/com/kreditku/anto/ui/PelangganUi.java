@@ -22,7 +22,7 @@ import javax.swing.JOptionPane;
 public class PelangganUi extends javax.swing.JInternalFrame {
     
     private CustomerDao customerDao;
-    //private Customer customer;
+    private Customer customer;
     private BaseTableModel<Customer> tableModel;  
 
     

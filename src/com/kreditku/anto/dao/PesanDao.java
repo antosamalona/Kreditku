@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class PesanDao {
     private static final String SQL_INSERT_PESAN
-            = "insert into pesan (id, id_customer, id_barang, laba) values (?,?,?,?)";
+            = "insert into tb_pesan (id_pesan, kd_pelanggan, kd_brg, laba, lm_kredit, krd_perbulan) values (?,?,?,?,?,?)";
     
     private Connection koneksiDb;
     
@@ -23,8 +23,8 @@ public class PesanDao {
             PreparedStatement ps = koneksiDb.prepareStatement(SQL_INSERT_PESAN);
             
             ps.setString(1, id);
-            ps.setString(2, p.getCustomer().getId());
-            ps.setString(3, p.getBarang().getId());
+            ps.setString(2, p.getCustomer().getKd_pelanggan());
+            ps.setString(3, p.getBarang().getKd_brg());
             ps.setBigDecimal(4, p.getLaba());
             
             ps.executeUpdate();

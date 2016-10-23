@@ -17,8 +17,6 @@ import lombok.Setter;
 @Getter @Setter @AllArgsConstructor
 public class Customer {
     
-        private String id;
-    
     	@TableColumn(header ="Kode Pelanggan")
 	private String kd_pelanggan;
 	
