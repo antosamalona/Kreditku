@@ -18,7 +18,7 @@ public class KoneksiDb {
     private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DB_URL = "jdbc:mysql://localhost:3306/dbku";
     private static final String USER = "root";
-    private static final String PASSWORD = "n4kk3 j13";
+    private static final String PASSWORD = "";
     
     public Connection getConnection() throws SQLException {
         if (connection == null) {
